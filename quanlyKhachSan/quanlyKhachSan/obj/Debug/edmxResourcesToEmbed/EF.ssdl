@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLKHACHSANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHITIETDATPHONG">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MAPHONG" />
+    </Key>
+    <Property Name="MAHD" Type="int" Nullable="false" />
+    <Property Name="MAPHONG" Type="int" Nullable="false" />
+    <Property Name="THOIGIANDEN" Type="datetime" />
+    <Property Name="THOIGIANDI" Type="datetime" />
+    <Property Name="TRANGTHAI" Type="bit" />
+    <Property Name="GIAPHONG" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="CHITIETSUDUNGDV">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MADICHVU" />
+    </Key>
+    <Property Name="MAHD" Type="int" Nullable="false" />
+    <Property Name="MADICHVU" Type="int" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="THANHTIEN" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="DICHVU">
+    <Key>
+      <PropertyRef Name="MADICHVU" />
+    </Key>
+    <Property Name="MADICHVU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENDICHVU" Type="nvarchar" MaxLength="100" />
+    <Property Name="GIADV" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="MOTA" Type="int" />
+    <Property Name="SOLUONGTON" Type="int" />
+    <Property Name="DONVI" Type="nvarchar" MaxLength="50" />
+    <Property Name="MALOAIDICHVU" Type="int" />
+  </EntityType>
+  <EntityType Name="GIAODIEN">
+    <Key>
+      <PropertyRef Name="MAGD" />
+    </Key>
+    <Property Name="MAGD" Type="int" Nullable="false" />
+    <Property Name="KIEU" Type="char" MaxLength="100" />
+    <Property Name="GIATRI" Type="int" />
+  </EntityType>
+  <EntityType Name="HDTHANHTOAN">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAKHACHHANG" Type="int" />
+    <Property Name="TIENKHACHDUA" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TONGTIENPHONG" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TONGTIENDICHVU" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="MANV" Type="int" />
+    <Property Name="NGAYHD" Type="date" />
+    <Property Name="TRANGTHAI" Type="int" />
+    <Property Name="NGAYTHANHTOAN" Type="datetime" />
+    <Property Name="PHONGDATHUE" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKHACHHANG" />
+    </Key>
+    <Property Name="MAKHACHHANG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAPHANCAP" Type="int" />
+    <Property Name="MANV" Type="int" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="100" />
+    <Property Name="SDT" Type="ntext" />
+    <Property Name="GIOITINH" Type="bit" />
+    <Property Name="CMND" Type="varchar" MaxLength="20" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="500" />
+    <Property Name="NGAYTAO" Type="date" />
+    <Property Name="EMAIL" Type="char" MaxLength="100" />
+    <Property Name="NGAYSINH" Type="date" />
+  </EntityType>
+  <EntityType Name="LOAIDICHVU">
+    <Key>
+      <PropertyRef Name="MALOAIDICHVU" />
+    </Key>
+    <Property Name="MALOAIDICHVU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAIDICHVU" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOAIPHONG">
+    <Key>
+      <PropertyRef Name="MALOAIPHONG" />
+    </Key>
+    <Property Name="MALOAIPHONG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAIPHONG" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOTA" Type="nvarchar" MaxLength="500" />
+    <Property Name="GIAGIOSAU" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GIANGAY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GIATHANG" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="GIAGIODAU" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="int" Nullable="false" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="100" />
+    <Property Name="NGAYSINH" Type="date" />
+    <Property Name="GT" Type="bit" />
+    <Property Name="CMND" Type="int" />
+    <Property Name="CHUCVU" Type="nvarchar" MaxLength="200" />
+    <Property Name="NGAYTAO" Type="date" />
+  </EntityType>
+  <EntityType Name="PCKHACHHANG">
+    <Key>
+      <PropertyRef Name="MAPHANCAP" />
+    </Key>
+    <Property Name="MAPHANCAP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GIAMGIA" Type="int" />
+    <Property Name="MOTA" Type="nvarchar" MaxLength="500" />
+    <Property Name="TENPC" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="MAPHONG" />
+    </Key>
+    <Property Name="MAPHONG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENPHONG" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOTA" Type="nvarchar" MaxLength="500" />
+    <Property Name="MALOAIPHONG" Type="int" />
+    <Property Name="TANG" Type="int" />
+    <Property Name="TRANGTHAI" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="MATAIKHOAN" />
+    </Key>
+    <Property Name="MATAIKHOAN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENDANGNHAP" Type="char" MaxLength="100" />
+    <Property Name="MATKHAU" Type="char" MaxLength="100" />
+    <Property Name="QUYENTRUYCAP" Type="int" />
+  </EntityType>
+  <EntityType Name="VATDUNG">
+    <Key>
+      <PropertyRef Name="MAVATDUNG" />
+    </Key>
+    <Property Name="MAVATDUNG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENVATDUNG" Type="nvarchar" MaxLength="200" />
+    <Property Name="HANGSANXUAT" Type="nvarchar" MaxLength="100" />
+    <Property Name="THOIGIANMUA" Type="date" />
+    <Property Name="CHITIET" Type="nvarchar" MaxLength="500" />
+    <Property Name="MAPHONG" Type="int" />
+    <Property Name="GIA" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK__CHITIETDA__MAPHO__07C12930">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="1" />
+    <End Role="CHITIETDATPHONG" Type="Self.CHITIETDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MAPHONG" />
+      </Principal>
+      <Dependent Role="CHITIETDATPHONG">
+        <PropertyRef Name="MAPHONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHITIETDAT__MAHD__06CD04F7">
+    <End Role="HDTHANHTOAN" Type="Self.HDTHANHTOAN" Multiplicity="1" />
+    <End Role="CHITIETDATPHONG" Type="Self.CHITIETDATPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HDTHANHTOAN">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CHITIETDATPHONG">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHITIETSU__MADIC__0B91BA14">
+    <End Role="DICHVU" Type="Self.DICHVU" Multiplicity="1" />
+    <End Role="CHITIETSUDUNGDV" Type="Self.CHITIETSUDUNGDV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICHVU">
+        <PropertyRef Name="MADICHVU" />
+      </Principal>
+      <Dependent Role="CHITIETSUDUNGDV">
+        <PropertyRef Name="MADICHVU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CHITIETSUD__MAHD__0A9D95DB">
+    <End Role="HDTHANHTOAN" Type="Self.HDTHANHTOAN" Multiplicity="1" />
+    <End Role="CHITIETSUDUNGDV" Type="Self.CHITIETSUDUNGDV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HDTHANHTOAN">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CHITIETSUDUNGDV">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DICHVU__MALOAIDI__45544755">
+    <End Role="LOAIDICHVU" Type="Self.LOAIDICHVU" Multiplicity="0..1" />
+    <End Role="DICHVU" Type="Self.DICHVU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIDICHVU">
+        <PropertyRef Name="MALOAIDICHVU" />
+      </Principal>
+      <Dependent Role="DICHVU">
+        <PropertyRef Name="MALOAIDICHVU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HDTHANHTO__MAKHA__7F2BE32F">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="HDTHANHTOAN" Type="Self.HDTHANHTOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKHACHHANG" />
+      </Principal>
+      <Dependent Role="HDTHANHTOAN">
+        <PropertyRef Name="MAKHACHHANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__KHACHHANG__MAPHA__7B5B524B">
+    <End Role="PCKHACHHANG" Type="Self.PCKHACHHANG" Multiplicity="0..1" />
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PCKHACHHANG">
+        <PropertyRef Name="MAPHANCAP" />
+      </Principal>
+      <Dependent Role="KHACHHANG">
+        <PropertyRef Name="MAPHANCAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PHONG__MALOAIPHO__71D1E811">
+    <End Role="LOAIPHONG" Type="Self.LOAIPHONG" Multiplicity="0..1" />
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIPHONG">
+        <PropertyRef Name="MALOAIPHONG" />
+      </Principal>
+      <Dependent Role="PHONG">
+        <PropertyRef Name="MALOAIPHONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VATDUNG__MAPHONG__23F3538A">
+    <End Role="PHONG" Type="Self.PHONG" Multiplicity="0..1" />
+    <End Role="VATDUNG" Type="Self.VATDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONG">
+        <PropertyRef Name="MAPHONG" />
+      </Principal>
+      <Dependent Role="VATDUNG">
+        <PropertyRef Name="MAPHONG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="fuConvertToUnsign1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="strInput" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetAllServiceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSearchServiceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_AddCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEmploye" Type="int" Mode="In" />
+    <Parameter Name="customerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="phoneNumber" Type="ntext" Mode="In" />
+    <Parameter Name="sex" Type="bit" Mode="In" />
+    <Parameter Name="identityCart" Type="ntext" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="birthDay" Type="date" Mode="In" />
+  </Function>
+  <Function Name="USP_BillDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idbill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_CreateBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_DeleteAllRoomSelected" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idbill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteGroupRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteRoomItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roomItemID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_DeleteService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_DelteCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customerId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCustomer" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetDetalBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRoom" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_GetRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRoom" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_InBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertGroupRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="detal" Type="nvarchar" Mode="In" />
+    <Parameter Name="priceHoursLate" Type="decimal" Mode="In" />
+    <Parameter Name="priceDay" Type="decimal" Mode="In" />
+    <Parameter Name="priceMonth" Type="decimal" Mode="In" />
+    <Parameter Name="priceHoursFirst" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="USP_insertGroupService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="groupRoomId" Type="int" Mode="In" />
+    <Parameter Name="floor" Type="int" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertRoomItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="manufacture" Type="nvarchar" Mode="In" />
+    <Parameter Name="sateTime" Type="date" Mode="In" />
+    <Parameter Name="detail" Type="nvarchar" Mode="In" />
+    <Parameter Name="roomId" Type="int" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="USP_InsertService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="detail" Type="nvarchar" Mode="In" />
+    <Parameter Name="amount" Type="int" Mode="In" />
+    <Parameter Name="unit" Type="nvarchar" Mode="In" />
+    <Parameter Name="idGroup" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_SearchCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_SearchGroupRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_SearchRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_SearchService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_ShowBill1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_ShowBillByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromDate" Type="date" Mode="In" />
+    <Parameter Name="toDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="USP_ShowCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_ShowDetailServiceUsed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_ShowRoomSelectedByIdBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_ShowRoomSelectedByIdBill2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_TraserRoomIdInDetailBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromRoomID" Type="int" Mode="In" />
+    <Parameter Name="toRoomId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="customerId" Type="int" Mode="In" />
+    <Parameter Name="groupId" Type="int" Mode="In" />
+    <Parameter Name="customerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="customerPhone" Type="varchar" Mode="In" />
+    <Parameter Name="customerIdCard" Type="varchar" Mode="In" />
+    <Parameter Name="customerAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="customerSex" Type="bit" Mode="In" />
+    <Parameter Name="customerBirthDay" Type="date" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateGroupRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="detal" Type="nvarchar" Mode="In" />
+    <Parameter Name="priceHoursLate" Type="decimal" Mode="In" />
+    <Parameter Name="priceDay" Type="decimal" Mode="In" />
+    <Parameter Name="priceMonth" Type="decimal" Mode="In" />
+    <Parameter Name="priceHoursFirst" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateGroupService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="detal" Type="nvarchar" Mode="In" />
+    <Parameter Name="groupRoomId" Type="int" Mode="In" />
+    <Parameter Name="floor" Type="int" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateRoomItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roomItemID" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="manufacture" Type="nvarchar" Mode="In" />
+    <Parameter Name="sateTime" Type="date" Mode="In" />
+    <Parameter Name="detail" Type="nvarchar" Mode="In" />
+    <Parameter Name="roomId" Type="int" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateRoomStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRoom" Type="int" Mode="In" />
+    <Parameter Name="rStatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="price" Type="decimal" Mode="In" />
+    <Parameter Name="detail" Type="nvarchar" Mode="In" />
+    <Parameter Name="amount" Type="int" Mode="In" />
+    <Parameter Name="unit" Type="nvarchar" Mode="In" />
+    <Parameter Name="idGroup" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateTotalRoomCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_UpdateTotalService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_ViewGroupRoom1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_ViewGroupService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_ViewRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="USP_ViewRoomItemOfRoom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roomID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="USP_ViewService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="QLKHACHSANModelStoreContainer">
+    <EntitySet Name="CHITIETDATPHONG" EntityType="Self.CHITIETDATPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETSUDUNGDV" EntityType="Self.CHITIETSUDUNGDV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DICHVU" EntityType="Self.DICHVU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GIAODIEN" EntityType="Self.GIAODIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HDTHANHTOAN" EntityType="Self.HDTHANHTOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIDICHVU" EntityType="Self.LOAIDICHVU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIPHONG" EntityType="Self.LOAIPHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PCKHACHHANG" EntityType="Self.PCKHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VATDUNG" EntityType="Self.VATDUNG" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__CHITIETDA__MAPHO__07C12930" Association="Self.FK__CHITIETDA__MAPHO__07C12930">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="CHITIETDATPHONG" EntitySet="CHITIETDATPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHITIETDAT__MAHD__06CD04F7" Association="Self.FK__CHITIETDAT__MAHD__06CD04F7">
+      <End Role="HDTHANHTOAN" EntitySet="HDTHANHTOAN" />
+      <End Role="CHITIETDATPHONG" EntitySet="CHITIETDATPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHITIETSU__MADIC__0B91BA14" Association="Self.FK__CHITIETSU__MADIC__0B91BA14">
+      <End Role="DICHVU" EntitySet="DICHVU" />
+      <End Role="CHITIETSUDUNGDV" EntitySet="CHITIETSUDUNGDV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CHITIETSUD__MAHD__0A9D95DB" Association="Self.FK__CHITIETSUD__MAHD__0A9D95DB">
+      <End Role="HDTHANHTOAN" EntitySet="HDTHANHTOAN" />
+      <End Role="CHITIETSUDUNGDV" EntitySet="CHITIETSUDUNGDV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DICHVU__MALOAIDI__45544755" Association="Self.FK__DICHVU__MALOAIDI__45544755">
+      <End Role="LOAIDICHVU" EntitySet="LOAIDICHVU" />
+      <End Role="DICHVU" EntitySet="DICHVU" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HDTHANHTO__MAKHA__7F2BE32F" Association="Self.FK__HDTHANHTO__MAKHA__7F2BE32F">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HDTHANHTOAN" EntitySet="HDTHANHTOAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK__KHACHHANG__MAPHA__7B5B524B" Association="Self.FK__KHACHHANG__MAPHA__7B5B524B">
+      <End Role="PCKHACHHANG" EntitySet="PCKHACHHANG" />
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PHONG__MALOAIPHO__71D1E811" Association="Self.FK__PHONG__MALOAIPHO__71D1E811">
+      <End Role="LOAIPHONG" EntitySet="LOAIPHONG" />
+      <End Role="PHONG" EntitySet="PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VATDUNG__MAPHONG__23F3538A" Association="Self.FK__VATDUNG__MAPHONG__23F3538A">
+      <End Role="PHONG" EntitySet="PHONG" />
+      <End Role="VATDUNG" EntitySet="VATDUNG" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLKHACHSANModelStoreContainer" CdmEntityContainer="QLKHACHSANEntities">
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QLKHACHSANModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QLKHACHSANModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QLKHACHSANModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QLKHACHSANModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QLKHACHSANModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLKHACHSANModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLKHACHSANModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="USP_CreateBill" FunctionName="QLKHACHSANModel.Store.USP_CreateBill" />
+    <FunctionImportMapping FunctionImportName="USP_SearchCustomer" FunctionName="QLKHACHSANModel.Store.USP_SearchCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_SearchCustomer_Result">
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="TENPC" ColumnName="TENPC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ShowCustomer" FunctionName="QLKHACHSANModel.Store.USP_ShowCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowCustomer_Result">
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="TENPC" ColumnName="TENPC" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_AddCustomer" FunctionName="QLKHACHSANModel.Store.USP_AddCustomer" />
+    <FunctionImportMapping FunctionImportName="USP_BillDelete" FunctionName="QLKHACHSANModel.Store.USP_BillDelete" />
+    <FunctionImportMapping FunctionImportName="USP_DeleteAllRoomSelected" FunctionName="QLKHACHSANModel.Store.USP_DeleteAllRoomSelected" />
+    <FunctionImportMapping FunctionImportName="USP_ShowRoomSelectedByIdBill" FunctionName="QLKHACHSANModel.Store.USP_ShowRoomSelectedByIdBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowRoomSelectedByIdBill_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="THOIGIANDEN" ColumnName="THOIGIANDEN" />
+          <ScalarProperty Name="THOIGIANDI" ColumnName="THOIGIANDI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllServiceList" FunctionName="QLKHACHSANModel.Store.GetAllServiceList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.GetAllServiceList_Result">
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetDetalBill" FunctionName="QLKHACHSANModel.Store.USP_GetDetalBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_GetDetalBill_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="THOIGIANDEN" ColumnName="THOIGIANDEN" />
+          <ScalarProperty Name="THOIGIANDI" ColumnName="THOIGIANDI" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetBill" FunctionName="QLKHACHSANModel.Store.USP_GetBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_GetBill_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="TIENKHACHDUA" ColumnName="TIENKHACHDUA" />
+          <ScalarProperty Name="TONGTIENPHONG" ColumnName="TONGTIENPHONG" />
+          <ScalarProperty Name="TONGTIENDICHVU" ColumnName="TONGTIENDICHVU" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GetCustomer" FunctionName="QLKHACHSANModel.Store.USP_GetCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_GetCustomer_Result">
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="MAPHANCAP" ColumnName="MAPHANCAP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSearchServiceList" FunctionName="QLKHACHSANModel.Store.GetSearchServiceList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.GetSearchServiceList_Result">
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ShowDetailServiceUsed" FunctionName="QLKHACHSANModel.Store.USP_ShowDetailServiceUsed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowDetailServiceUsed_Result">
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_UpdateTotalRoomCharge" FunctionName="QLKHACHSANModel.Store.USP_UpdateTotalRoomCharge" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateTotalService" FunctionName="QLKHACHSANModel.Store.USP_UpdateTotalService" />
+    <FunctionImportMapping FunctionImportName="USP_InBill" FunctionName="QLKHACHSANModel.Store.USP_InBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_InBill_Result">
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYTHANHTOAN" ColumnName="NGAYTHANHTOAN" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="TIENKHACHDUA" ColumnName="TIENKHACHDUA" />
+          <ScalarProperty Name="TONGTIENPHONG" ColumnName="TONGTIENPHONG" />
+          <ScalarProperty Name="TONGTIENDICHVU" ColumnName="TONGTIENDICHVU" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ShowRoomSelectedByIdBill2" FunctionName="QLKHACHSANModel.Store.USP_ShowRoomSelectedByIdBill2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowRoomSelectedByIdBill2_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="THOIGIANDEN" ColumnName="THOIGIANDEN" />
+          <ScalarProperty Name="THOIGIANDI" ColumnName="THOIGIANDI" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="GIAPHONG" ColumnName="GIAPHONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_UpdateRoomStatus" FunctionName="QLKHACHSANModel.Store.USP_UpdateRoomStatus" />
+    <EntitySetMapping Name="CHITIETDATPHONGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.CHITIETDATPHONG">
+        <MappingFragment StoreEntitySet="CHITIETDATPHONG">
+          <ScalarProperty Name="GIAPHONG" ColumnName="GIAPHONG" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="THOIGIANDI" ColumnName="THOIGIANDI" />
+          <ScalarProperty Name="THOIGIANDEN" ColumnName="THOIGIANDEN" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETSUDUNGDVs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.CHITIETSUDUNGDV">
+        <MappingFragment StoreEntitySet="CHITIETSUDUNGDV">
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DICHVUs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.DICHVU">
+        <MappingFragment StoreEntitySet="DICHVU">
+          <ScalarProperty Name="MALOAIDICHVU" ColumnName="MALOAIDICHVU" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDTHANHTOANs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.HDTHANHTOAN">
+        <MappingFragment StoreEntitySet="HDTHANHTOAN">
+          <ScalarProperty Name="PHONGDATHUE" ColumnName="PHONGDATHUE" />
+          <ScalarProperty Name="NGAYTHANHTOAN" ColumnName="NGAYTHANHTOAN" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TONGTIENDICHVU" ColumnName="TONGTIENDICHVU" />
+          <ScalarProperty Name="TONGTIENPHONG" ColumnName="TONGTIENPHONG" />
+          <ScalarProperty Name="TIENKHACHDUA" ColumnName="TIENKHACHDUA" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MAPHANCAP" ColumnName="MAPHANCAP" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIDICHVUs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.LOAIDICHVU">
+        <MappingFragment StoreEntitySet="LOAIDICHVU">
+          <ScalarProperty Name="TENLOAIDICHVU" ColumnName="TENLOAIDICHVU" />
+          <ScalarProperty Name="MALOAIDICHVU" ColumnName="MALOAIDICHVU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIPHONGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.LOAIPHONG">
+        <MappingFragment StoreEntitySet="LOAIPHONG">
+          <ScalarProperty Name="GIAGIODAU" ColumnName="GIAGIODAU" />
+          <ScalarProperty Name="GIATHANG" ColumnName="GIATHANG" />
+          <ScalarProperty Name="GIANGAY" ColumnName="GIANGAY" />
+          <ScalarProperty Name="GIAGIOSAU" ColumnName="GIAGIOSAU" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENLOAIPHONG" ColumnName="TENLOAIPHONG" />
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="GT" ColumnName="GT" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PCKHACHHANGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.PCKHACHHANG">
+        <MappingFragment StoreEntitySet="PCKHACHHANG">
+          <ScalarProperty Name="TENPC" ColumnName="TENPC" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="GIAMGIA" ColumnName="GIAMGIA" />
+          <ScalarProperty Name="MAPHANCAP" ColumnName="MAPHANCAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.PHONG">
+        <MappingFragment StoreEntitySet="PHONG">
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="TANG" ColumnName="TANG" />
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VATDUNGs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.VATDUNG">
+        <MappingFragment StoreEntitySet="VATDUNG">
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="CHITIET" ColumnName="CHITIET" />
+          <ScalarProperty Name="THOIGIANMUA" ColumnName="THOIGIANMUA" />
+          <ScalarProperty Name="HANGSANXUAT" ColumnName="HANGSANXUAT" />
+          <ScalarProperty Name="TENVATDUNG" ColumnName="TENVATDUNG" />
+          <ScalarProperty Name="MAVATDUNG" ColumnName="MAVATDUNG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_DeleteGroupRoom" FunctionName="QLKHACHSANModel.Store.USP_DeleteGroupRoom" />
+    <FunctionImportMapping FunctionImportName="USP_DeleteRoom" FunctionName="QLKHACHSANModel.Store.USP_DeleteRoom" />
+    <FunctionImportMapping FunctionImportName="USP_DeleteService" FunctionName="QLKHACHSANModel.Store.USP_DeleteService" />
+    <FunctionImportMapping FunctionImportName="USP_GetRoom" FunctionName="QLKHACHSANModel.Store.USP_GetRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_GetRoom_Result">
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="TANG" ColumnName="TANG" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_InsertGroupRoom" FunctionName="QLKHACHSANModel.Store.USP_InsertGroupRoom" />
+    <FunctionImportMapping FunctionImportName="USP_insertGroupService" FunctionName="QLKHACHSANModel.Store.USP_insertGroupService" />
+    <FunctionImportMapping FunctionImportName="USP_InsertRoom" FunctionName="QLKHACHSANModel.Store.USP_InsertRoom" />
+    <FunctionImportMapping FunctionImportName="USP_InsertService" FunctionName="QLKHACHSANModel.Store.USP_InsertService" />
+    <FunctionImportMapping FunctionImportName="USP_SearchGroupRoom" FunctionName="QLKHACHSANModel.Store.USP_SearchGroupRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_SearchGroupRoom_Result">
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="TENLOAIPHONG" ColumnName="TENLOAIPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="GIAGIOSAU" ColumnName="GIAGIOSAU" />
+          <ScalarProperty Name="GIANGAY" ColumnName="GIANGAY" />
+          <ScalarProperty Name="GIATHANG" ColumnName="GIATHANG" />
+          <ScalarProperty Name="GIAGIODAU" ColumnName="GIAGIODAU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_SearchRoom" FunctionName="QLKHACHSANModel.Store.USP_SearchRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_SearchRoom_Result">
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="TANG" ColumnName="TANG" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_SearchService" FunctionName="QLKHACHSANModel.Store.USP_SearchService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_SearchService_Result">
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+          <ScalarProperty Name="MALOAIDICHVU" ColumnName="MALOAIDICHVU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_UpdateGroupRoom" FunctionName="QLKHACHSANModel.Store.USP_UpdateGroupRoom" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateGroupService" FunctionName="QLKHACHSANModel.Store.USP_UpdateGroupService" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateRoom" FunctionName="QLKHACHSANModel.Store.USP_UpdateRoom" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateService" FunctionName="QLKHACHSANModel.Store.USP_UpdateService" />
+    <FunctionImportMapping FunctionImportName="USP_ViewGroupService" FunctionName="QLKHACHSANModel.Store.USP_ViewGroupService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ViewGroupService_Result">
+          <ScalarProperty Name="MALOAIDICHVU" ColumnName="MALOAIDICHVU" />
+          <ScalarProperty Name="TENLOAIDICHVU" ColumnName="TENLOAIDICHVU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ViewRoom" FunctionName="QLKHACHSANModel.Store.USP_ViewRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ViewRoom_Result">
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="TANG" ColumnName="TANG" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ViewService" FunctionName="QLKHACHSANModel.Store.USP_ViewService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ViewService_Result">
+          <ScalarProperty Name="MADICHVU" ColumnName="MADICHVU" />
+          <ScalarProperty Name="TENDICHVU" ColumnName="TENDICHVU" />
+          <ScalarProperty Name="GIADV" ColumnName="GIADV" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="SOLUONGTON" ColumnName="SOLUONGTON" />
+          <ScalarProperty Name="DONVI" ColumnName="DONVI" />
+          <ScalarProperty Name="MALOAIDICHVU" ColumnName="MALOAIDICHVU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ViewGroupRoom1" FunctionName="QLKHACHSANModel.Store.USP_ViewGroupRoom1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ViewGroupRoom1_Result">
+          <ScalarProperty Name="MALOAIPHONG" ColumnName="MALOAIPHONG" />
+          <ScalarProperty Name="TENLOAIPHONG" ColumnName="TENLOAIPHONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="GIAGIOSAU" ColumnName="GIAGIOSAU" />
+          <ScalarProperty Name="GIANGAY" ColumnName="GIANGAY" />
+          <ScalarProperty Name="GIATHANG" ColumnName="GIATHANG" />
+          <ScalarProperty Name="GIAGIODAU" ColumnName="GIAGIODAU" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ShowBill1" FunctionName="QLKHACHSANModel.Store.USP_ShowBill1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowBill1_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="PHONGDATHUE" ColumnName="PHONGDATHUE" />
+          <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
+          <ScalarProperty Name="NGAYTHANHTOAN" ColumnName="NGAYTHANHTOAN" />
+          <ScalarProperty Name="TONGTIENPHONG" ColumnName="TONGTIENPHONG" />
+          <ScalarProperty Name="TONGTIENDICHVU" ColumnName="TONGTIENDICHVU" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_TraserRoomIdInDetailBill" FunctionName="QLKHACHSANModel.Store.USP_TraserRoomIdInDetailBill" />
+    <FunctionImportMapping FunctionImportName="USP_ShowBillByDate" FunctionName="QLKHACHSANModel.Store.USP_ShowBillByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ShowBillByDate_Result">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="PHONGDATHUE" ColumnName="PHONGDATHUE" />
+          <ScalarProperty Name="NGAYHD" ColumnName="NGAYHD" />
+          <ScalarProperty Name="NGAYTHANHTOAN" ColumnName="NGAYTHANHTOAN" />
+          <ScalarProperty Name="TONGTIENPHONG" ColumnName="TONGTIENPHONG" />
+          <ScalarProperty Name="TONGTIENDICHVU" ColumnName="TONGTIENDICHVU" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="GIAODIENs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.GIAODIEN">
+        <MappingFragment StoreEntitySet="GIAODIEN">
+          <ScalarProperty Name="GIATRI" ColumnName="GIATRI" />
+          <ScalarProperty Name="KIEU" ColumnName="KIEU" />
+          <ScalarProperty Name="MAGD" ColumnName="MAGD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="USP_DeleteRoomItem" FunctionName="QLKHACHSANModel.Store.USP_DeleteRoomItem" />
+    <FunctionImportMapping FunctionImportName="USP_DelteCustomer" FunctionName="QLKHACHSANModel.Store.USP_DelteCustomer" />
+    <FunctionImportMapping FunctionImportName="USP_InsertRoomItem" FunctionName="QLKHACHSANModel.Store.USP_InsertRoomItem" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateCustomer" FunctionName="QLKHACHSANModel.Store.USP_UpdateCustomer" />
+    <FunctionImportMapping FunctionImportName="USP_UpdateRoomItem" FunctionName="QLKHACHSANModel.Store.USP_UpdateRoomItem" />
+    <FunctionImportMapping FunctionImportName="USP_ViewRoomItemOfRoom" FunctionName="QLKHACHSANModel.Store.USP_ViewRoomItemOfRoom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLKHACHSANModel.USP_ViewRoomItemOfRoom_Result">
+          <ScalarProperty Name="MAVATDUNG" ColumnName="MAVATDUNG" />
+          <ScalarProperty Name="TENVATDUNG" ColumnName="TENVATDUNG" />
+          <ScalarProperty Name="HANGSANXUAT" ColumnName="HANGSANXUAT" />
+          <ScalarProperty Name="THOIGIANMUA" ColumnName="THOIGIANMUA" />
+          <ScalarProperty Name="CHITIET" ColumnName="CHITIET" />
+          <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="QLKHACHSANModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="QUYENTRUYCAP" ColumnName="QUYENTRUYCAP" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="TENDANGNHAP" ColumnName="TENDANGNHAP" />
+          <ScalarProperty Name="MATAIKHOAN" ColumnName="MATAIKHOAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

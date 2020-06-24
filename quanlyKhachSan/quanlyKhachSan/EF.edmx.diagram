@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="154bc69c9be14b2db4bcd467c48aeaee" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="QLKHACHSANModel.CHITIETDATPHONG" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.CHITIETSUDUNGDV" Width="1.5" PointX="12.25" PointY="2.375" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.DICHVU" Width="1.5" PointX="10" PointY="3.375" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.HDTHANHTOAN" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.LOAIDICHVU" Width="1.5" PointX="7.75" PointY="3.875" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.LOAIPHONG" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.NHANVIEN" Width="1.5" PointX="7.75" PointY="7.125" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.PCKHACHHANG" Width="1.5" PointX="1.5" PointY="13.5" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.PHONG" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.sysdiagram" Width="1.5" PointX="7.75" PointY="11.125" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.VATDUNG" Width="1.5" PointX="5.25" PointY="8.5" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__CHITIETDA__MAPHO__07C12930" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__CHITIETDAT__MAHD__06CD04F7" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__CHITIETSU__MADIC__0B91BA14" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__CHITIETSUD__MAHD__0A9D95DB" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__DICHVU__MALOAIDI__45544755" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__HDTHANHTO__MAKHA__7F2BE32F" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__KHACHHANG__MAPHA__7B5B524B" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__PHONG__MALOAIPHO__71D1E811" />
+        <AssociationConnector Association="QLKHACHSANModel.FK__VATDUNG__MAPHONG__23F3538A" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.GIAODIEN" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="QLKHACHSANModel.TAIKHOAN" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
